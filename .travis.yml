@@ -5,4 +5,4 @@ script:
  - ruby hello.rb
 os: linux
 group: stable
-dist: bionic
+dist: trusty
