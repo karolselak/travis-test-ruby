@@ -6,6 +6,6 @@ script:
 os: linux
 group: stable
 dist: trusty
-before_install:
- - sudo apt install -y docker
- - docker --version
+addons:
+  yum:
+   - docker
