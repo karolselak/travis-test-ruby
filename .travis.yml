@@ -7,5 +7,5 @@ os: linux
 group: stable
 dist: trusty
 addons:
-  yum:
+  apt:
    - docker
