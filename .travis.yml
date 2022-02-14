@@ -7,5 +7,5 @@ os: linux
 group: stable
 dist: trusty
 before_install:
- - apt install -y docker
+ - sudo apt install -y docker
  - docker --version
