@@ -8,6 +8,7 @@ script:
 os: linux
 group: stable
 dist: rhel
-before_install:
- - sudo yum install -y docker
- - docker --version
+addons:
+  yum:
+   - docker
+
