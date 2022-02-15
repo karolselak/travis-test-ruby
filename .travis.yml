@@ -5,6 +5,7 @@ rvm:
  - "2.7"
 services:
   - postgresql
+  - mysql
 before_script:
   - psql -c 'create database travis_ci_test_1;' -U postgres
   - psql -c 'create table knights (name text);' -U postgres
