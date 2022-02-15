@@ -10,10 +10,10 @@ before_script:
   - psql -c 'create table knights (name text);' -U postgres
   - psql -c "insert into knights values ('Edric');" -U postgres
   - psql -c 'select * from knights;' -U postgres
-  - mysql -u travis -p -e 'create database travis_ci_test_2'
-  - mysql -u travis -p travis_ci_test_2 -e 'create table knights (name text);'
-  - mysql -u travis -p travis_ci_test_2 -e "insert into knights values ('Arthur');"
-  - mysql -u travis -p travis_ci_test_2 -e 'select * from knights;'
+  - mysql -u=travis -p='' -e 'create database travis_ci_test_2'
+  - mysql -u=travis -p='' travis_ci_test_2 -e 'create table knights (name text);'
+  - mysql -u=travis -p='' travis_ci_test_2 -e "insert into knights values ('Arthur');"
+  - mysql -u=travis -p='' travis_ci_test_2 -e 'select * from knights;'
 script:
  - ruby hello.rb
 os: linux
