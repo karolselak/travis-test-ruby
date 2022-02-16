@@ -6,6 +6,3 @@ script:
 os: linux
 group: stable
 dist: trusty
-addons:
-  apt:
-   - docker
