@@ -7,10 +7,6 @@ services:
   - postgresql
   - mysql
 before_script:
-  - psql -c 'create database travis_ci_test_1;' -U postgres
-  - psql -c 'create table knights (name text);' -U postgres
-  - psql -c "insert into knights values ('Edric');" -U postgres
-  - psql -c 'select * from knights;' -U postgres
   - mysql -e 'create database travis_ci_test_2'
   - mysql travis_ci_test_2 -e 'create table knights (name text);'
   - mysql travis_ci_test_2 -e "insert into knights values ('Arthur');"
